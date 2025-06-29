@@ -25,6 +25,9 @@ app.post("/create-order", async (req, res) => {
         userId,
         planKey,
         planPoint,
+        Expiry,
+        Features,
+        PerStudentPrice
       }
     });
     res.json(order);
