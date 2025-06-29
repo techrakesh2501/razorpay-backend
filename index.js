@@ -20,7 +20,12 @@ app.post("/create-order", async (req, res) => {
       amount: amount * 100,
       currency,
       receipt,
-      payment_capture: 1 
+      payment_capture: 1,
+      notes: {
+        userId,
+        planKey,
+        planPoint,
+      }
     });
     res.json(order);
   } catch (err) {
