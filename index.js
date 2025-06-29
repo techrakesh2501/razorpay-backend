@@ -14,7 +14,7 @@ const razorpay = new Razorpay({
 });
 
 app.post("/create-order", async (req, res) => {
-  const { amount, currency, receipt } = req.body;
+  const { amount, currency, receipt, userId, planKey, planPoint, Expiry, Features, PerStudentPrice } = req.body;
   try {
     const order = await razorpay.orders.create({
       amount: amount * 100,
